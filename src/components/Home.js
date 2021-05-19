@@ -31,7 +31,7 @@ export default function Home() {
       <div className="row">
         <div className="col-md-4 offset-4">
 
-          {error && <div className="alert alert-danger">Désolé, les identifiants sont incorrects.</div>}
+          {error && <div id="authErrorMessage" className="alert alert-danger">Désolé, les identifiants sont incorrects.</div>}
 
           <div className="form-group">
             <label htmlFor="email">Adresse e-mail</label>
