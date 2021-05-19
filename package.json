@@ -2,10 +2,26 @@
   "name": "todo-list-react-qa",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.6.0",
+    "@wdio/dot-reporter": "^7.0.7",
+    "@wdio/local-runner": "^7.0.8",
+    "@wdio/mocha-framework": "^7.0.7",
+    "@wdio/selenium-standalone-service": "^7.0.7",
+    "@wdio/spec-reporter": "^7.0.7",
+    "@wdio/sync": "^7.0.8",
+    "chai": "^4.3.0",
+    "chai-webdriverio": "^1.0.0",
+    "local-runner": "^0.1.1-alpha",
+    "webdriverio": "^7.0.8"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "@wdio/cli": "^7.0.8",
+    "allure-commandline": "^2.13.8",
+    "fibers": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -15,8 +31,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "tests": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test": "./node_modules/.bin/wdio ./wdio.conf.js",
+    "action1": "./node_modules/.bin/wdio ./wdio.conf.js --suites action1",
+    "action2": "./node_modules/.bin/wdio ./wdio.conf.js --suites action2",
+    "action3": "./node_modules/.bin/wdio ./wdio.conf.js --suites action3",
+    "action4": "./node_modules/.bin/wdio ./wdio.conf.js --suites action4"
   },
   "eslintConfig": {
     "extends": [

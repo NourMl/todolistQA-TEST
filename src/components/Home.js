@@ -11,6 +11,9 @@ export default function Home() {
   const auth = providerAuth();
   const history = useHistory();
 
+  /**
+   * Log the user and redirect the page to the route "/tasks".
+   */
   const logIn = () => {
     if (email === 'test@test.com' && password === 'test') {
       auth.signin("Test")
@@ -19,6 +22,7 @@ export default function Home() {
       return;
     }
 
+    // If credentials are invalid, an error is shown.
     setError(true);
   }
 
@@ -27,7 +31,7 @@ export default function Home() {
       <div className="row">
         <div className="col-md-4 offset-4">
 
-          {error && <div className="alert alert-danger">Désolé, les identifiants sont incorrects.</div>}
+          {error && <div id="authErrorMessage" className="alert alert-danger">Désolé, les identifiants sont incorrects.</div>}
 
           <div className="form-group">
             <label htmlFor="email">Adresse e-mail</label>
